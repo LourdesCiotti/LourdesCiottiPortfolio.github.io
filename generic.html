@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Web Scrapping</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/internet.svg" alt="" /></span><span class="title">Return To Main Page</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Web Scrapping</a></li>
+						</ul>
+					</nav>
+
+					<!-- Main -->
+					<div id="main">
+						<div class="inner">
+						<h1><strong>Is Messi truly a superstar?</strong></h1>
+						<span class="image main">
+							<img src="images/messi-miami.jpg" alt="" style="width: 100%; max-height: 200px; object-fit: contain;" />
+						</span>	
+					
+						<p>The Major League Soccer (MLS), much like other prominent sports leagues in the United States (NBA, NFL, etc.), operates within a distinctive business framework, where clubs serve as franchises under a private company.This organizational structure, coupled with its specific corporate guidelines, significantly influences team management and the construction of player rosters. The recent inclusion of soccer superstars like Lionel Messi has marked a pivotal moment for the league, prompting questions about how these stars impact team performance and the overall popularity of the league. Additionally, it raises the question of what insights corporate organizations can glean from this phenomenon.</p>
+					
+						<p>As I delved into the exploration of this intriguing intersection between sports and business, I found a wealth of information available for qualitative analysis. However, when it came to obtaining quantitative data on Messi's performance in the MLS, the landscape was less populated. Notably, the MLS official page offered remarkable <a href="https://github.com/LourdesCiotti/WebScrappingMessiMLS/tree/main" style="color: #0800ff;">interactive tables</a> that allowed ranking teams and players based on various metrics such as Games Played, Goals Scored, Penalty Kicks taken, and Penalty Conceded. <strong>This discovery led me to the world of Web Scraping, a technique designed for extracting data from websites.</strong></p>
+					
+						<p>In my initial attempts, I utilized <strong>Beautiful Soup</strong>, a Python library tailored for web scraping HTML and XML files. While it provided a parse tree for easy navigation and data extraction, I encountered challenges such as incorrect data generation and missing information. Upon further investigation, I learned that interactive tables, like the ones I sought to extract, are often dynamically populated using JavaScript, requiring a different approach. After considering various alternatives, I opted for <strong>Selenium</strong>, a tool that automates interactions with websites, proving particularly effective for scraping dynamic or interactive content.<p>
+						<p>Executing this decision involved additional steps, including <strong> downloading the appropriate version of "ChromeService" for my computer to enable execution in my Chrome browser. Once accomplished, I inspected the webpage, identified the relevant elements, used "CSS_selector" to determine the necessary columns and rows, and ultimately downloaded the information into a CSV file.</strong> This meticulous process aimed to extract data about each player on the Inter Miami team and every football team in the MLS. During the inspection of these tables, subtle differences in their composition emerged. <strong>For those interested, I have provided a link to a GitHub repository containing both Python codes, you can <a href="https://github.com/LourdesCiotti/WebScrappingMessiMLS/tree/main" style="color: #0800ff;">click here</a> and it will redirect to the GitHub Repository</strong></p>
+						
+						<p><img src="images/code.jpg" alt="Your Photo Description" style="width: 50%; height: auto; margin: 0 auto; display: block;"></p>
+						
+						<p><strong>With this information in hand, I conducted data cleaning on the CSV file and generated visualizations.</strong> The most noteworthy of these is a comparison between Messi's performance and the weighted mean of other players. The visual representation vividly showcases Messi's exceptional abilities on the field. Moreover, the visual analysis of Messi's performance in the MLS has sparked an intriguing prospect – extending this study to his initial games with PSG. Such an exploration would provide valuable insights, comparing his impact on both teams and offering a holistic view of his evolving prowess.</p>
+					
+						<p><img src="images/Messi Analysis.jpg" alt="Your Photo Description" style="width: 50%; height: auto; margin: 0 auto; display: block;"></p>
+					
+						<p><strong>To conclude, by embarking on this web scraping adventure, I've fine-tuned my skills in Selenium, orchestrating a seamless dance with dynamic web content using tools like ChromeService and webdriver.Chrome.</strong> The strategic implementation of WebDriverWait proved a game-changer, introducing a dash of patience to ensure the reliability of my data extraction endeavors. Mastering CSS selectors became my secret weapon, allowing me to deftly navigate through complex web structures and pinpoint the exact data I needed. Python's csv module showcased its magic, effortlessly crafting a CSV file that elegantly documented the intricacies of player stats. Wrapping it all up, organized, and well-commented code emerged not just as a coding practice but as a language of its own, ensuring that the story of this web scraping journey is accessible to anyone curious about the magic behind the data curtain.</p>
+						</div>
+					</div>
+  
+
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								
+								</form>
+							</section>
+							<section>
+								<h2>Social Media</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/LourdesCiotti" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/lourdes-florencia-ciotti/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
